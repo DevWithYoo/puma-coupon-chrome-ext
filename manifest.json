@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "룰렛 쿠폰 자동화",
+  "version": "1.0.0",
+  "description": "목표 할인율 달성까지 자동으로 룰렛을 돌려주는 확장 프로그램",
+  "author": "토끼귀신",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "룰렛 쿠폰 자동화"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
