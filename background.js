@@ -4,7 +4,7 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({
     isRunning: false,
-    targetDiscount: 30,
+    targetDiscount: 40,
     attemptCount: 0,
     statusMessage: '대기 중'
   });
